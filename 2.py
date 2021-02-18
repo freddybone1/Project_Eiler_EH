@@ -13,3 +13,27 @@ the even-valued terms.
 
 """
 
+fib_list = [1, 2]
+value = 0
+for i in range(1000):
+    fib_list.append(fib_list[-1] + fib_list[-2])
+    if fib_list[-1] > 4000000:
+        break
+
+print(fib_list)
+for item in fib_list:
+    if item % 2 == 0:
+        value += item
+
+print(value)
+
+
+# не получилось найти решение этой задачи с помощью рекурсии
+# def fib(a, b):
+#
+#     if b > 4000000:
+#         return print()
+#
+#     return fib(b, a+b)
+#
+# fib(1,2)
